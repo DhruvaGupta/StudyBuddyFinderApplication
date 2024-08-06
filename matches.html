@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Matches - Study Buddy Finder</title>
+</head>
+<body>
+    <h1>Matches for <span th:text="${student.name}"></span></h1>
+    <h2>Compatible Study Buddies:</h2>
+    <ul>
+        <li th:each="match : ${matches}" th:text="${match.name}"></li>
+    </ul>
+    <div th:if="${#lists.isEmpty(matches)}">
+        <p>No match, come back later.</p>
+    </div>
+    <a href="/">Back to home</a>
+</body>
+</html>

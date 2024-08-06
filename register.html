@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register - Study Buddy Finder</title>
+</head>
+<body>
+    <h1>Register as a Student</h1>
+    <form action="#" th:action="@{/register}" th:object="${student}" method="post">
+        <label>Name: <input type="text" th:field="*{name}" /></label><br/>
+        <label>Major: <input type="text" th:field="*{major}" /></label><br/>
+        <label>Courses (comma-separated): <input type="text" th:field="*{courses}" /></label><br/>
+        <label>Preferred Study Time: <input type="text" th:field="*{preferredStudyTime}" /></label><br/>
+        <label>Study Style: <input type="text" th:field="*{studyStyle}" /></label><br/>
+        <button type="submit">Register</button>
+    </form>
+    <a href="/">Back to home</a>
+</body>
+</html>
